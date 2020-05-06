@@ -13,9 +13,18 @@ module.exports = {
                 use : ['style-loader','css-loader','sass-loader']
             },
             {
-                test:/\.less$/,
-                use : ['style-loader','css-loader','less-loader']
-            }
+                test:/\.js$/,
+                exclude:/node_modules/,
+                use : [
+                    {
+                        loader:'babel-loader',
+                        options:{
+                            babelrc:false,
+                            presets:['@babel/preset-env']
+                        }
+                    }
+                ]
+            },
         ]
     },
     devServer:{
