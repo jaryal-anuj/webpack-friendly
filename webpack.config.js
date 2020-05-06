@@ -5,5 +5,11 @@ module.exports = {
     output:{
         filename:'js/app.js',
         path: path.resolve(__dirname,'dist')
+    },
+    devServer:{
+        contentBase: path.join(__dirname,'dist'),
+        port:8080,
+        compress:true,
+        open:true
     }
 };

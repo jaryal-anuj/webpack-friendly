@@ -1,1 +1,1 @@
-console.log("Hello world from watching");
+console.log("Hello world dev server");
