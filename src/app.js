@@ -1,4 +1,12 @@
 import './assets/styles/app.scss';
 
-let name = 'alex';
-console.log(name);
+let options = {
+    something:true,
+    anotherThing:false
+}
+
+options = {
+    ...options,
+    oneMoreThing:true
+}
+console.log(options);

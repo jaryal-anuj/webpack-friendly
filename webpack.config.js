@@ -20,7 +20,8 @@ module.exports = {
                         loader:'babel-loader',
                         options:{
                             babelrc:false,
-                            presets:['@babel/preset-env']
+                            presets:['@babel/preset-env'],
+                            plugins:[require('@babel/plugin-proposal-object-rest-spread')]
                         }
                     }
                 ]
@@ -31,6 +32,5 @@ module.exports = {
         contentBase: path.join(__dirname,'dist'),
         port:8080,
         compress:true,
-        open:true
     }
 };
