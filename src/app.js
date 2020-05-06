@@ -1,1 +1,1 @@
-console.log("Hello world from config");
+console.log("Hello world from watching");
