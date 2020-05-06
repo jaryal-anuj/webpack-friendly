@@ -9,14 +9,6 @@ module.exports = {
     module:{
         rules:[
             {
-                test:/\.scss$/,
-                use : [
-                    'style-loader',
-                    {loader:'css-loader',options:{minimize:process.env.NODE_ENV==='prod'}},
-                    'sass-loader'
-                ]
-            },
-            {
                 test:/\.js$/,
                 exclude:/node_modules/,
                 use : [
