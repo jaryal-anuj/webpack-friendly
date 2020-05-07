@@ -1,5 +1,6 @@
 import './assets/styles/app.scss';
+import * as api from './app/api';
 
-
-console.log(process.env.NODE_ENV);
-console.log(process.env.API_URL);
+api.getPosts().then(response=>{
+    console.log(response);
+})
