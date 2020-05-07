@@ -1,3 +1,3 @@
-import router from './routes/router';
+import router from './router/';
 
 console.log(router())
