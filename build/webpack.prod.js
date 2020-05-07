@@ -7,6 +7,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = merge(base,{
+    devtool:'#source-map',
     module:{
         rules:[
             {
@@ -19,13 +20,21 @@ module.exports = merge(base,{
         ]
     },
     plugins:[
-        new UglifyJSPlugin(),
+        new UglifyJSPlugin({
+            sourceMap:true
+        }),
         new webpack.DefinePlugin({
             'process.env':JSON.stringify(env)
         }),
         new ExtractTextPlugin({
             filename:'../dist/css/app.css'
         }),
-        new OptimizeCssAssetsPlugin()
+        new OptimizeCssAssetsPlugin({
+            cssProcessorOptions:{
+                map:{
+                    inline:false
+                }
+            }
+        })
     ],
 });
