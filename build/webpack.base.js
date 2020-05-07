@@ -6,6 +6,12 @@ module.exports = {
         filename:'js/app.js',
         path: path.resolve(__dirname,'./../dist')
     },
+    resolve:{
+        alias:{
+            '@':path.join(__dirname,'../src'),
+            'styles':path.join(__dirname,'../src/assets/styles')
+        }
+    },
     module:{
         rules:[
             {
