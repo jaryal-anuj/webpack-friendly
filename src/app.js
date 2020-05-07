@@ -1,13 +1,9 @@
-var sounds = {
-    name:"anuj",
-    meow(){
-        return 'Meow'
-    },
-    hiss(){
-        return 'Hiss'
-    }
+
+var register=(email,username, password )=>{
+    console.log("Registered",email,username,password);
 }
 
-var name = 'Mabel';
-var mabel = {name,sounds}
-console.log(mabel)
+var payload = ['alex@codecourse.com','alex','cats'];
+
+register.apply(null,payload)
+register(...payload)
